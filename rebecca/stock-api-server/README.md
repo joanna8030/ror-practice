@@ -1,4 +1,5 @@
 # stock-api-server
+[![BuildStatus](https://travis-ci.org/rakuten-f2e/ror-practice.svg?branch=dev%2Frebecca)](https://travis-ci.org/rakuten-f2e/ror-practice)
 
 This is a stock server for checking everyday top50 stock turnover.
 
