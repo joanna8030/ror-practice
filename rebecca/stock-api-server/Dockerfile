@@ -4,6 +4,7 @@ FROM ruby:2.1.5
 RUN apt-get update && \
     apt-get install -y nodejs --no-install-recommends && \
     apt-get install -y npm --no-install-recommends && \
+    apt-get install -y vim --no-install-recommends && \
     rm -rf /var/lib/apt/lists/* &&\
     npm install -g n && \
     n 6.0.0 && \
@@ -20,4 +21,5 @@ RUN bundle install
 COPY . /usr/src/app
 
 EXPOSE 3000
+EXPOSE 9876
 CMD ["bash", "./docker-cmd.sh"]

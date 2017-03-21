@@ -1,8 +1,9 @@
 {
-  "extends": ["angular", "airbnb-base"],
+  "extends": ["angular", "airbnb-base", "plugin:jasmine/recommended"],
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "jasmine": true
   },
   "rules": {
     "no-var": 0,
@@ -23,5 +24,6 @@
     "no-unused-expressions": 0,
     "jsx-quotes": ["error", "prefer-single"],
     "linebreak-style": [0, "unix"]
-  }
+  },
+  "plugins": ["jasmine"]
 }
