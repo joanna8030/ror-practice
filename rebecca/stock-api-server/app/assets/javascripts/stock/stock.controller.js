@@ -21,8 +21,13 @@ angular
   })
   .controller('TableController', function($location) {
     var vm = this;
-    vm.$location = $location;
     vm.paramIsEmpty = function() {
       return angular.equals({}, $location.search());
+    };
+    vm.getCSVUrl = function() {
+      if ($location.path() === '/') {
+        return $location.absUrl() + 'stock.csv';
+      }
+      return $location.absUrl().replace(/search/, 'search.csv');
     };
   });
