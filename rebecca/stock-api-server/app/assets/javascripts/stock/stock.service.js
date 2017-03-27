@@ -1,6 +1,6 @@
 angular
   .module('stockApp')
-  .factory('StockFactory', function($http, SEARCH_URL) {
+  .factory('getStock', function($http, SEARCH_URL) {
     return {
       getData: function(date, code) {
         return $http({

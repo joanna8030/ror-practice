@@ -7,9 +7,9 @@ angular
       controller: 'DataController',
       controllerAs: 'vm',
       resolve: {
-        stocks: function(StockFactory, $route) {
+        stocks: function(getStock, $route) {
 
-          return StockFactory.getData($route.current.params.date, $route.current.params.code).then(function(res) {
+          return getStock.getData($route.current.params.date, $route.current.params.code).then(function(res) {
             return res.data;
           });
         }
