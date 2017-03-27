@@ -41,8 +41,9 @@ module.exports = function(config) {
     },
 
     ngHtml2JsPreprocessor: {
-      stripPrefix: 'app/assets/javascripts/stock/search-form',
-      stripSufix: '.slim'
+      stripPrefix: 'app/assets/javascripts/stock/search-form/',
+      prependPrefix: 'assets/stock/search-form/',
+      moduleName: 'templates'
     },
 
     // test results reporter to use
